@@ -52,4 +52,5 @@ RUN install2.r --error \
   ranger \
   xgboost \
   rpart \
-  kernlab
+  kernlab \
+  FactoMineR
