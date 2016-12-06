@@ -57,4 +57,4 @@ RUN Rscript -e "install.packages('RCurl')"
 RUN Rscript -e "install.packages('bitops')"
 RUN Rscript -e "install.packages('statmod')"
 RUN Rscript -e "install.packages('tools')"
-RUN Rscript -e "install.packages('h2o')"
+RUN Rscript -e 'install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws.com/h2o/rel-turnbull/1/R")))'
