@@ -8,7 +8,8 @@ RUN apt-get update && \
   ssh && \
   apt-get clean all
 
-RUN Rscript -e "install.packages('gbm')"
+RUN Rscript -e "install.packages('devtools')"
+RUN Rscript -e "library(devtools);install_github('gbm-developers/gbm')"
 RUN Rscript -e "install.packages('pROC')"
 RUN Rscript -e "install.packages('ROCR')"
 RUN Rscript -e "install.packages('chron')"
@@ -61,3 +62,4 @@ RUN Rscript -e 'install.packages("h2o", type="source", repos=(c("http://h2o-rele
 RUN Rscript -e "install.packages('C50')"
 RUN Rscript -e "install.packages('clue')"
 RUN Rscript -e "install.packages('flexclust')"
+RUN Rscript -e "install.packages('pmml')"
