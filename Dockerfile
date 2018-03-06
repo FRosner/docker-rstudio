@@ -1,8 +1,8 @@
-FROM rocker/rstudio
+FROM rocker/rstudio:3.4.3
 
 RUN apt-get update && \
   apt-get install -y \
-  libgdal1-dev \
+  libgdal-dev \
   libproj-dev \
   libv8-dev \
   ssh && \
